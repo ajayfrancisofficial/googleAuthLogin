@@ -24,7 +24,7 @@ function Login() {
 
     console.log(inputs);
     return (
-        <div>
+        <div className='m-5'>
 
             <Row>
                 <Col lg={8}>
@@ -34,13 +34,14 @@ function Login() {
                         <h5 className=' text-secondary'>with</h5>
                         <h1 className='text-success'>Google</h1>
                         <h3 className='display-1 text-success'>Authentication.</h3>
+                        <p className=' text-secondary'>(This project focuses only on google authentication)</p>
                     </div>
                 </Col>
                 <Col lg={4}>
                     <Container className='w-75'>
                         <div className='border text-center rounded ' style={{ height: "500px" }}>
 
-                            <h1 className=' m-5'>Login</h1>
+                            <h1 className=' m-5'>Log in</h1>
                             <FloatingLabel
                                 controlId="floatingInput"
                                 label="Email address"
@@ -56,7 +57,7 @@ function Login() {
                             <p className='m-4'>OR</p>
                         <div className='m-3 '>
                                 <GoogleOAuthProvider  clientId="604591960034-f2nhsj5k4bkf23aat3otode9h9gcimo8.apps.googleusercontent.com">
-                                    <GoogleLogin
+                                    <GoogleLogin shape='pill' size='large' width={'100px'}
                                         onSuccess={credentialResponse => {
                                             console.log(credentialResponse)
                                             navigate("/home")
